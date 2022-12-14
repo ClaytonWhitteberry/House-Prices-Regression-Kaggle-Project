@@ -48,7 +48,7 @@ The output for each model is the predicted house prices from each model.
 
 ### Training  
   
-I loaded the data in with pandas' read_csv, went through the preprocessing process described above, and then I used train test split to split the training dataset I was provided 60/40. I then implemented four different models listed above, attempted to optimize the number of features I used, and tried a few different parameter settings to see if my results got better.  
+I loaded the data in with pandas' read csv, went through the preprocessing process described above, and then I used train test split to split the training dataset I was provided 60/40. I then implemented four different models listed above, attempted to optimize the number of features I used, and tried a few different parameter settings to see if my results got better.  
   
 I decided to stop training because I ran out of time. I would have tested a few different paramater settings. One of the main difficulties I ran into late in the process was how long it took to run some code. The loops to optimize for feature number and to test different settings could take very long to load. Eventually I couldn't keep trying and had to move to the next thing.  
   
