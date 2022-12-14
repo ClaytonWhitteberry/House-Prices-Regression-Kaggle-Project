@@ -69,13 +69,13 @@ The output for each model is the predicted house prices from each model.
   
 I loaded the data in with pandas' read csv function, went through the preprocessing process described above, and then I used train test split to split the training dataset I was provided 60/40. I then implemented four different models listed above, attempted to optimize the number of features I used, and tried a few different parameter settings to see if my results got better.  
   
-I decided to stop training because I ran out of time. I would have tested a few different paramater settings. One of the main difficulties I ran into late in the process was how long it took to run some code. The loops to optimize for feature number and to test different settings could take very long to load. Eventually I couldn't keep trying and had to move to the next thing.  
+For the SVR and ElasticNet models, both performed enough worse than the SGDRegressor model did, so I didn't do further training with those models other than trying some different kernel types with the SVR model. With SGD and ARD, I stopped training due to time. I would have tested a few different paramater settings. One of the main difficulties I ran into late in the process was how long it took to run some code. The loops to optimize for feature number and to test different settings could take very long to load.  
   
-Most of the other difficulties had more to do with the preprocessing process than the training process. Implementing the models I used was fairly simple other than what I just mentioned. It took a while to get the data ready by cleaning up NaN inputs and encoding my categorical data. Should have moved on from scikit learn's OneHotEncoder to pandas' get dummies sooner.  
+Most of the other difficulties had more to do with the preprocessing process than the training process. Implementing the models I used was fairly simple other than what I just mentioned. It took a while to get the data ready by cleaning up NaN inputs and encoding my categorical data. Should have moved on from scikit learn's OneHotEncoder to pandas' get dummies sooner. As I mentioned before, the main problem training the models was trying to run loops to determine the optimal parameter settings and feature selections.  
   
 ### Performance Comparison  
   
-The evaluation metric used for the Kaggle project was the root mean squared error, so that's one metric I used. RMSE is the square root of the mean squared error which is the mean of the squared errors, the differences between the predicted value and the actual value.  
+The evaluation metric used for the Kaggle project was the root mean squared error, so that's one metric I used. RMSE is the square root of the mean of the squared errors, the differences between the predicted value and the actual value.  
   
 The second metric I used was r2 because it's easier to look at and interpret. For RMSE, the lower the value, the better, but it's affected by the scale of the target variable, and because I was dealing with house prices, the scale of the target variable was large leading to large RMSE values. With r2 it's always between 0 and 1, and the closer to 1 it is the better.  
   
