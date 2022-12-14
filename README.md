@@ -24,7 +24,9 @@ In this github repository there's an attempt to use regression models handling m
 
 **Data Visualization:**  
 
-Data visualization included in repository above.
+![](HistogramExample.png)  
+  
+![](ScatterExample.png)
   
 ### Problem Formulation  
   
