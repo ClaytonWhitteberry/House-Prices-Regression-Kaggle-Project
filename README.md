@@ -1,6 +1,6 @@
 # House Prices - Advanced Regression Techniques  
   
-In this github repository there's an attempt to use regression models handling multiple features with scikit learn to predict house prices from data like the square footage and condition of the home.  
+This repository holds an attempt to use regression models handling multiple features with scikit learn to predict house prices from data like the square footage and condition of the home.  
   
 ### Overview  
   
