@@ -5,7 +5,8 @@ This repository holds an attempt to use regression models handling multiple feat
 ### Overview  
   
 **Description:** The aim of this project is to take data including 79 explanatory variables and predict the sales price of homes using regression techniques.  
-**My Approach:** This task was a regression task, so I tested out four different scikit learn regression models to find one that performed well on the data.
+**My Approach:** This was a regression task, so I tested out four different scikit learn regression models to find one that performed well on the data. Stochastic Gradient Descent and Automatic Relevance Determination regression performed best with root mean squared errors of 31819.1 and 35166.8 respectively, and r2 scores of 0.84 and 0.81 respectively.
+
 **Summary of Performance Achieved**:  
   
 ### Summary of Work  
