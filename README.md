@@ -39,7 +39,7 @@ The output for each model is the predicted house prices from each model.
 * SGDRegressor: This is scikit learn's stochastic gradient descent regression model. The main reason I tried this model was because it was a linear model that could handle many features. Scikit learn lists SGD's strengths as being efficient and easy to implement.  
 * SVR: This is scikit learn's support vector regression model. It's one of the nonlinear models I tried. The guide I looked at said this was useful for data with large amounts unimportant features.
 * ElasticNet: ElasticNet is a linear model with both l1 and l2 regularizers. It blends lasso and ridge regression. I used it because I wanted to do another linear model that would handle many features after the SVR model performed much worse than the SGD model.  
-* ARDRegression: This is another linear model that does bayesian ridge regression with sparser weight values. It gives similar results to lasso regression while also not requiring as much work testing regularization term weights. I chose this model after trying the MLPRegressor and the most basic version of it scoring very badly.
+* ARDRegression: Automatic Relevance Determination Regression. This is another linear model that does bayesian ridge regression with sparser weight values. It gives similar results to lasso regression while also not requiring as much work testing regularization term weights. I chose this model after trying the MLPRegressor and the most basic version of it scoring very badly.
 * SGD and ARD performed the best of these models, both pretty similarly looking at the root mean squared error and r2 scores.  
 
 **Loss, Optimizer, other Hyperparamaters:**  
@@ -48,11 +48,19 @@ The output for each model is the predicted house prices from each model.
 * For the SVR model, I tested the sigmoid and poly kernel settings to see if they were an improvement upon the default rbf kernel setting. Sigmoid didn't make much of a difference. Poly made the results much worse.  
 * For all four models I used permutation importance from scikit learn to do feature selection. It scores features. I then tested various numbers of features selected from the best features to see how many features for each model was optimal. For SGD, it was between 30 and 40. For SVR, it was close to 20. For ElasticNet, the fewer the better. And for ARD it was about 20-25.  
 
+**SGD Scores and Features Plot**  
+
 ![](SGD_FeatureScores.png)  
+  
+**SVR Scores and Features Plot**  
   
 ![](SVR_FeatureScores.png)  
   
+**ElasticNet Scores and Features Plot**  
+  
 ![](ElasticNet_FeatureScores.png)  
+  
+**ARD Scores and Features Plot**
   
 ![](ARD_FeatureScores.png)
 
@@ -69,6 +77,14 @@ Most of the other difficulties had more to do with the preprocessing process tha
 The evaluation metric used for the Kaggle project was the root mean squared error, so that's one metric I used. RMSE is the square root of the mean squared error which is the mean of the squared errors, the differences between the predicted value and the actual value.  
   
 The second metric I used was r2 because it's easier to look at and interpret. For RMSE, the lower the value, the better, but it's affected by the scale of the target variable, and because I was dealing with house prices, the scale of the target variable was large leading to large RMSE values. With r2 it's always between 0 and 1, and the closer to 1 it is the better.  
+  
+**Table Comparing Model Results**  
+  
+![](TableResults.png)
+  
+**Root Mean Squared Error and R2 Score Bar Charts**  
+  
+![](ScoreBarCharts.png)
   
 ### Future Work  
   
