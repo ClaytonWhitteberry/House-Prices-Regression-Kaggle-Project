@@ -25,7 +25,7 @@ This repository holds an attempt to use regression models handling multiple feat
 
 **Data Visualization:**  
 
-![](HistogramExample.png)  
+![](HistExample.png)  
   
 ![](ScatterExample.png)
   
@@ -85,7 +85,17 @@ The second metric I used was r2 because it's easier to look at and interpret. Fo
   
 **Root Mean Squared Error and R2 Score Bar Charts**  
   
-![](ScoreBarCharts.png)
+![](ScoreBarCharts.png)  
+  
+**Histograms of Predictions vs. Targets**  
+  
+![](SGDHist.png)  
+  
+![](SVRHist.png)  
+  
+![](ElasticNetHist.png)  
+  
+![](ARDHist.png)
   
 ### Future Work  
   
