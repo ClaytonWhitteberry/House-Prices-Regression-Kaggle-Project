@@ -48,6 +48,14 @@ The output for each model is the predicted house prices from each model.
 * For the SVR model, I tested the sigmoid and poly kernel settings to see if they were an improvement upon the default rbf kernel setting. Sigmoid didn't make much of a difference. Poly made the results much worse.  
 * For all four models I used permutation importance from scikit learn to do feature selection. It scores features. I then tested various numbers of features selected from the best features to see how many features for each model was optimal. For SGD, it was between 30 and 40. For SVR, it was close to 20. For ElasticNet, the fewer the better. And for ARD it was about 20-25.  
 
+![](SGD_FeatureScores.png)  
+  
+![](SVR_FeatureScores.png)  
+  
+![](ElasticNet_FeatureScores.png)  
+  
+![](ARD_FeatureScores.png)
+
 ### Training  
   
 I loaded the data in with pandas' read csv function, went through the preprocessing process described above, and then I used train test split to split the training dataset I was provided 60/40. I then implemented four different models listed above, attempted to optimize the number of features I used, and tried a few different parameter settings to see if my results got better.  
