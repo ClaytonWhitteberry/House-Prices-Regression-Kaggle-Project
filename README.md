@@ -5,9 +5,9 @@ This repository holds an attempt to use regression models handling multiple feat
 ### Overview  
   
 **Description:** The aim of this project is to take data including 79 explanatory variables and predict the sales price of homes using regression techniques.  
-**My Approach:** This was a regression task, so I tested out four different scikit learn regression models to find one that performed well on the data. Stochastic Gradient Descent and Automatic Relevance Determination regression performed best with root mean squared errors of 31819.1 and 35166.8 respectively, and r2 scores of 0.84 and 0.81 respectively.
+**My Approach:** This was a regression task, so I tested out four different scikit learn regression models to find one that performed well on the data.  The four models used were SGDRegressor, SVR, ElasticNet, and ARDRegression.  
 
-**Summary of Performance Achieved**:  
+**Summary of Performance Achieved**: Stochastic Gradient Descent and Automatic Relevance Determination regression performed best with root mean squared errors of 31819.1 and 35166.8 respectively, and r2 scores of 0.84 and 0.81 respectively.  
   
 ### Summary of Work  
   
@@ -40,7 +40,7 @@ The output for each model is the predicted house prices from each model.
 * SGDRegressor: This is scikit learn's stochastic gradient descent regression model. The main reason I tried this model was because it was a linear model that could handle many features. Scikit learn lists SGD's strengths as being efficient and easy to implement.  
 * SVR: This is scikit learn's support vector regression model. It's one of the nonlinear models I tried. The guide I looked at said this was useful for data with large amounts unimportant features.
 * ElasticNet: ElasticNet is a linear model with both l1 and l2 regularizers. It blends lasso and ridge regression. I used it because I wanted to do another linear model that would handle many features after the SVR model performed much worse than the SGD model.  
-* ARDRegression: Automatic Relevance Determination Regression. This is another linear model that does bayesian ridge regression with sparser weight values. It gives similar results to lasso regression while also not requiring as much work testing regularization term weights. I chose this model after trying the MLPRegressor and the most basic version of it scoring very badly.
+* ARDRegression: Automatic Relevance Determination Regression. This is another linear model that does bayesian ridge regression with sparser weight values. It gives similar results to lasso regression while also not requiring as much work testing regularization term weights.  
 * SGD and ARD performed the best of these models, both pretty similarly looking at the root mean squared error and r2 scores.  
 
 **Loss, Optimizer, other Hyperparamaters:**  
